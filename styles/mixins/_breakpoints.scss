@@ -1,0 +1,11 @@
+@mixin container-min($min-width) {
+  @media (min-width: $min-width) {
+    display: none !important;
+  }
+}
+
+@mixin container-max($max-width) {
+  @media (max-width: $max-width) {
+    display: none !important;
+  }
+}

@@ -1,0 +1,50 @@
+@import 'styles/variables/breakpoints';
+
+.overlay {
+  width: 140px;
+
+  :global(.ant-dropdown-menu-item-divider) {
+    margin: 0 !important;
+  }
+
+  ul {
+    padding: 0;
+
+    li {
+      &:first-child {
+        padding: 7px 12px;
+        border-radius: 4px 4px 0 0;
+
+        &:hover {
+          cursor: default !important;
+          background-color: transparent !important;
+        }
+      }
+
+      &:last-child {
+        border-radius: 0 0 4px 4px;
+      }
+
+      &:first-child,
+      &:last-child {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.avatar {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+
+  margin-left: auto;
+
+  @media (max-width: $screen-breakpoint-md) {
+    width: 32px;
+    height: 32px;
+  }
+}

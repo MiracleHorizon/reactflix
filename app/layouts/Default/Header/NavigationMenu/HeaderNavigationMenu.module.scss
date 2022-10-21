@@ -1,0 +1,54 @@
+@import 'styles/mixins/breakpoints';
+@import 'styles/variables/breakpoints';
+@import 'styles/variables/colors';
+
+.nav {
+  @include container-max($screen-breakpoint-md);
+
+  min-width: 400px;
+  margin-right: auto;
+  border: none;
+
+  span {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  ul {
+    background: $dark-gray;
+    border-bottom: none;
+
+    :global(.ant-menu-item-selected) {
+      a {
+        color: white !important;
+      }
+    }
+
+    :global(.ant-menu-item-active) {
+      color: white !important;
+
+      a {
+        &:hover {
+          color: white !important;
+        }
+      }
+    }
+
+    li {
+      :global(.ant-menu-title-content) {
+        a {
+          color: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+  }
+
+  :global {
+    .ant-menu-item-selected,
+    .ant-menu-item-active {
+      &::after {
+        border-bottom: 2px solid $antd-orange-6 !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "styles/variables/colors";
+
+.container {
+  margin-left: 12px;
+
+  button {
+    font-weight: 500;
+  }
+}
+
+.join {
+  background: $antd-orange-6;
+  border: none;
+
+  &:hover {
+    background: $antd-orange-5;
+  }
+}

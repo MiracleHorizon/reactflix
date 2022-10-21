@@ -1,0 +1,29 @@
+@import 'styles/variables/index';
+@import 'styles/variables/colors';
+@import 'styles/variables/breakpoints';
+
+$pX-default: 30px;
+$pX-md: 20px;
+
+.container {
+  position: sticky;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  height: $default-layout-header-height;
+  padding: 0 $pX-default;
+  background: $dark-gray;
+  z-index: 999;
+
+  @media screen and (max-width: $screen-breakpoint-md) {
+    padding: 0 $pX-md;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}

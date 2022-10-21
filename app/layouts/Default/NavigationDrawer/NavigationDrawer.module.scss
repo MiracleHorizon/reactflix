@@ -1,0 +1,24 @@
+$width-lg: 320px;
+$width-sm: 100%;
+
+.drawer {
+  :global {
+    .ant-drawer-content-wrapper {
+      width: $width-lg !important;
+
+      @media (max-width: 420px) {
+        width: $width-sm !important;
+      }
+    }
+
+    .ant-drawer-body {
+      padding: 0;
+
+      li {
+        margin-top: 0;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}
