@@ -1,0 +1,24 @@
+@import 'styles/variables/breakpoints';
+@import 'styles/movie/variables';
+@import 'styles/mixins/horizontal-scroll-wrapper';
+
+.overview {
+  margin-top: 12px;
+
+  ul {
+    @include horizontal-scroll-wrapper($wrapper-px-lg);
+
+    @media (max-width: $screen-breakpoint-sm) {
+      @include horizontal-scroll-wrapper($wrapper-px-sm);
+    }
+  }
+
+  :global(div.ant-typography) {
+    font-size: 16px;
+    text-align: justify;
+
+    @media (max-width: $screen-breakpoint-md) {
+      font-size: 14px;
+    }
+  }
+}

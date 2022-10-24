@@ -1,0 +1,17 @@
+@import 'styles/variables/colors';
+
+.list {
+  display: flex;
+  padding: 0;
+
+  .moreKeywordsBtn {
+    color: $antd-blue-5;
+  }
+
+  button {
+    height: 28px;
+    margin: 2px 4px 2px 0;
+    padding: 0 10px;
+    border-radius: 8px;
+  }
+}

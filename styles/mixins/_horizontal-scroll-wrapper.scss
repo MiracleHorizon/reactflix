@@ -1,0 +1,10 @@
+@mixin horizontal-scroll-wrapper($parentXPadding) {
+  flex-wrap: nowrap;
+  max-width: calc(100vw - ($parentXPadding * 2));
+  overflow: auto hidden;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+}

@@ -1,0 +1,25 @@
+@import 'styles/variables/colors';
+@import 'styles/variables/breakpoints';
+
+.container {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    left: 0;
+    content: '';
+    align-self: flex-start;
+    width: 4px;
+    height: 100%;
+    border-radius: 4px;
+    background: $antd-orange-5;
+  }
+
+  h2 {
+    margin-left: 12px;
+
+    @media (max-width: $screen-breakpoint-md) {
+      font-size: 24px;
+    }
+  }
+}

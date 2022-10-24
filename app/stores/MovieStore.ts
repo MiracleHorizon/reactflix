@@ -55,7 +55,7 @@ class MovieStore {
   }
 
   public initializeData({ keywords, credits, reviews, lists, ...details }: IMovieResponse) {
-    this._keywords = keywords.keywords
+    this._keywords = keywords.keywords.map(keyword => keyword.name)
     this._details = details
     this._credits = credits
     this._reviews = reviews.results
