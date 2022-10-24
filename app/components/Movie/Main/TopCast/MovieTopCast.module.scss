@@ -1,0 +1,31 @@
+@import 'styles/mixins/horizontal-scroll-wrapper';
+@import 'styles/variables/breakpoints';
+@import 'styles/movie/variables';
+
+.list {
+  padding-bottom: 6px;
+
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+
+    li {
+      min-width: 50%;
+      width: 50%;
+      border-bottom: none !important;
+    }
+
+    @media (max-width: $screen-breakpoint-lg) {
+      @include horizontal-scroll-wrapper($wrapper-px-lg);
+
+      li {
+        min-width: auto;
+        width: auto;
+      }
+    }
+
+    @media (max-width: $screen-breakpoint-sm) {
+      @include horizontal-scroll-wrapper($wrapper-px-sm);
+    }
+  }
+}
