@@ -1,0 +1,52 @@
+@import 'styles/variables/breakpoints';
+@import 'styles/mixins/breakpoints';
+
+// Max width.
+.xs-container-max {
+  @include container-max($screen-breakpoint-xs);
+}
+
+.sm-container-max {
+  @include container-max($screen-breakpoint-sm);
+}
+
+.md-container-max {
+  @include container-max($screen-breakpoint-md);
+}
+
+.lg-container-max {
+  @include container-max($screen-breakpoint-lg);
+}
+
+.xl-container-max {
+  @include container-max($screen-breakpoint-xl);
+}
+
+.xxl-container-max {
+  @include container-max($screen-breakpoint-xxl);
+}
+
+// Min width.
+.xs-container-min {
+  @include container-min($screen-breakpoint-xs);
+}
+
+.sm-container-min {
+  @include container-min($screen-breakpoint-sm);
+}
+
+.md-container-min {
+  @include container-min($screen-breakpoint-md);
+}
+
+.lg-container-min {
+  @include container-min($screen-breakpoint-lg + 1px);
+}
+
+.xl-container-min {
+  @include container-min($screen-breakpoint-xl + 1px);
+}
+
+.xxl-container-min {
+  @include container-min($screen-breakpoint-xxl);
+}

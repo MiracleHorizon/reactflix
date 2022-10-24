@@ -1,0 +1,23 @@
+@import 'styles/variables/colors';
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  :global {
+    li.ant-rate-star {
+      svg {
+        width: 26px;
+        height: 26px;
+      }
+    }
+
+    .ant-rate-star-full {
+      svg {
+        fill: $antd-blue-5;
+      }
+    }
+  }
+}

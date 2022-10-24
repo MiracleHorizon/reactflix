@@ -1,8 +1,13 @@
+import Link from 'next/link'
 import { DefaultLayout } from 'layouts/Default'
 
 const HomePage = () => (
   <DefaultLayout>
-    <div>Home page</div>
+    <div>
+      <Link href='/movie/680'>
+        <a>Test</a>
+      </Link>
+    </div>
   </DefaultLayout>
 )
 

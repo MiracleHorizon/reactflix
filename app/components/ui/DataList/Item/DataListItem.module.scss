@@ -1,0 +1,31 @@
+@import 'styles/variables/breakpoints';
+
+$title-mr: 22px;
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+
+  h5 {
+    display: inline-block;
+    width: 60px;
+    margin: 0 $title-mr 0 0;
+
+    @media (max-width: $screen-breakpoint-sm) {
+      margin: 0 $title-mr / 2 0 0;
+    }
+  }
+
+  ul {
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

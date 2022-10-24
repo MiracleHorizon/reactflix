@@ -8,9 +8,9 @@ import { NavigationDrawer } from './NavigationDrawer'
 import Props from '../Layout.types'
 import styles from './DefaultLayout.module.scss'
 
-export const DefaultLayout: FC<Props> = ({ children }) => (
+export const DefaultLayout: FC<Props> = ({ children, ...seoData }) => (
   <Layout className={styles.layout}>
-    <HeadComponent />
+    <HeadComponent {...seoData} />
     <BackTop className={styles.backTop} />
     <DefaultLayoutHeader />
     <NavigationDrawer />

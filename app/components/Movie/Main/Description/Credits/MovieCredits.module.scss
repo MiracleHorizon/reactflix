@@ -1,0 +1,27 @@
+@import 'styles/variables/breakpoints';
+
+.wrapper {
+  width: 100%;
+  padding-right: 10%;
+  margin-bottom: 14px;
+
+  @media (max-width: $screen-breakpoint-lg) {
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+.collapse {
+  display: none;
+
+  :global {
+    .ant-collapse-header,
+    .ant-collapse-content-box {
+      padding: 4px 0 !important;
+    }
+  }
+
+  @media (max-width: $screen-breakpoint-lg) {
+    display: initial;
+  }
+}

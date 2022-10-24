@@ -1,0 +1,30 @@
+.marked_list {
+  display: flex;
+
+  li,
+  a {
+    margin-right: 4px;
+    list-style: none;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 2px;
+      height: 2px;
+      margin: 0 6px;
+      padding: 1px;
+      border-radius: 50%;
+      font-size: 1rem;
+      line-height: 0.5rem;
+      background-color: currentColor;
+    }
+  }
+
+  li:first-child,
+  a:first-child {
+    &:before {
+      content: none;
+    }
+  }
+}

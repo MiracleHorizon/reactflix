@@ -1,0 +1,69 @@
+@import 'styles/variables/colors';
+@import 'styles/variables/breakpoints';
+
+.btn {
+  width: 100%;
+  height: 40px;
+
+  &,
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  span {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  span[role='img'] {
+    height: 100%;
+    font-size: 18px;
+
+    svg {
+      position: relative;
+      top: 50%;
+      translate: 0 -50%;
+    }
+  }
+
+  strong {
+    margin-left: 8px;
+    margin-right: 2px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .maxRating {
+    margin-left: 2px;
+    font-size: 16px;
+  }
+
+  .maxRating,
+  .separator {
+    font-weight: 500;
+    color: $antd-gray-8;
+  }
+
+  @media (max-width: $screen-breakpoint-lg) {
+    padding: 4px 0;
+
+    b,
+    .maxRating {
+      font-size: 18px;
+    }
+  }
+}
+
+.defaultStar {
+  span[role='img'] {
+    color: $antd-gold-5;
+  }
+}
+
+.blueStar {
+  span[role='img'] {
+    color: $antd-blue-5;
+  }
+}

@@ -1,7 +1,10 @@
 import { makeAutoObservable } from 'mobx'
 
+import { SearchLanguages } from 'models/api/search/SearchLanguages'
+
 class AppStore {
   private _navDrawerOpen = false
+  private _searchLanguage = SearchLanguages.EN
 
   constructor() {
     makeAutoObservable(this)
@@ -9,6 +12,10 @@ class AppStore {
 
   public get navDrawerOpen() {
     return this._navDrawerOpen
+  }
+
+  public get searchLanguage() {
+    return this._searchLanguage
   }
 
   public openNavDrawer() {
