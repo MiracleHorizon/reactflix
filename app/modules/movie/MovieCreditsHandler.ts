@@ -1,5 +1,5 @@
 import { IMovieCredit } from 'models/movie/credits/IMovieCredit'
-import { MovieCreditDepartment } from './MovieCreditDepartment'
+import { MovieCreditDepartment } from '../../models/movie/MovieCreditDepartment'
 
 export class MovieCreditsHandler {
   constructor(private _crew: IMovieCredit[]) {}
@@ -23,7 +23,7 @@ export class MovieCreditsHandler {
   private getCreditDisplayObject({ id, name }: IMovieCredit) {
     return {
       name,
-      path: `/person/${id}`,
+      href: `/person/${id}`,
     }
   }
 

@@ -8,7 +8,7 @@ import styles from './Movie.module.scss'
 export const Movie = () => {
   const {
     details: { title },
-    keywords, //!
+    keywords,
   } = MovieStore
 
   return (

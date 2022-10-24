@@ -8,5 +8,7 @@ export interface IMovieDetails extends IMovie {
   runtime: number
   tagline: string | null
   genres: IDefaultApiEntity[]
+  spoken_languages: { name: string }[]
+  production_countries: { name: string }[]
   production_companies: IMovieProdCompany[]
 }

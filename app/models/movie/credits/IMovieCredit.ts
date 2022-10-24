@@ -1,4 +1,4 @@
-import { MovieCreditDepartment } from 'modules/movie/MovieCreditDepartment'
+import { MovieCreditDepartment } from 'models/movie/MovieCreditDepartment'
 
 export interface IMovieCredit {
   id: number

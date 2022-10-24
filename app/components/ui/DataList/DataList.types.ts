@@ -9,7 +9,7 @@ export interface IDataItem {
 
 interface ILinkItem {
   name: string
-  path: string
+  href: string
 }
 
 type TContent = string | string[] | ILinkItem[]

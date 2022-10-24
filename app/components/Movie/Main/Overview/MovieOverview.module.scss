@@ -16,9 +16,5 @@
   :global(div.ant-typography) {
     font-size: 16px;
     text-align: justify;
-
-    @media (max-width: $screen-breakpoint-md) {
-      font-size: 14px;
-    }
   }
 }

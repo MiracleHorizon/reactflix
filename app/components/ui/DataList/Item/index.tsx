@@ -15,7 +15,7 @@ export const DataListItem = ({ title, content }: IDataItem) => (
           typeof item === 'string' ? (
             item !== '' && <li key={item}>{item}</li>
           ) : (
-            <LinkWrapper key={item.path} href={item.path}>
+            <LinkWrapper key={item.href} href={item.href}>
               {item.name}
             </LinkWrapper>
           )
