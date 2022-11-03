@@ -1,4 +1,13 @@
 @import 'styles/variables/breakpoints';
+@import 'styles/variables/colors';
+@import 'styles/movie/variables';
+
+$mx-lg: 12px;
+$list-width-lg: calc(100vw - $wrapper-px-lg * 2);
+$list-width-sm: calc(100vw - $wrapper-px-sm * 2);
+
+$avatar-size-md: calc(($list-width-lg / 4) - ($mx-lg * 2));
+$avatar-size-sm: calc(($list-width-sm / 4) - ($mx-lg * 2));
 
 .item {
   display: flex !important;
@@ -7,7 +16,7 @@
   @media (max-width: $screen-breakpoint-lg) {
     flex-direction: column;
     max-width: 180px;
-    margin: 0 12px;
+    margin: 0 $mx-lg;
     text-align: center;
   }
 
@@ -49,8 +58,9 @@
   }
 
   .character {
-    font-size: 14px;
     margin-bottom: 0;
+    font-size: 14px;
+    color: $antd-gray-7;
   }
 
   @media (max-width: $screen-breakpoint-lg) {

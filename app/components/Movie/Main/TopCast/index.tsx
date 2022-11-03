@@ -13,7 +13,7 @@ export const MovieTopCast = () => {
 
   return (
     <section>
-      <QuoteTitle title='Top cast' href={`/movie/${id}/cast`} />
+      <QuoteTitle title='Top cast' href={`/movie/${id}/credits`} />
       <List
         className={styles.list}
         dataSource={cast.slice(0, 20)}

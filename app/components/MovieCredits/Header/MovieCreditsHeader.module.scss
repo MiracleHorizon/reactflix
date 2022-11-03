@@ -1,0 +1,29 @@
+@import 'styles/variables/colors';
+
+.header {
+  display: flex;
+}
+
+.poster {
+  max-width: 140px;
+  margin-right: 14px;
+}
+
+.title {
+  div:first-child:not(.ant-typography) {
+    display: flex;
+    align-items: center;
+
+    a {
+      margin-right: 4px;
+      font-size: 24px;
+      padding-left: 1px;
+    }
+
+    div {
+      margin-top: 4px;
+      margin-bottom: 0;
+      color: $antd-gray-8;
+    }
+  }
+}

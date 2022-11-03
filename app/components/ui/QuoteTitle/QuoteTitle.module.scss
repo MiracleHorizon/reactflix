@@ -9,7 +9,7 @@
     left: 0;
     content: '';
     align-self: flex-start;
-    width: 4px;
+    width: 3px;
     height: 100%;
     border-radius: 4px;
     background: $antd-orange-5;
@@ -17,6 +17,7 @@
 
   h2 {
     margin-left: 12px;
+    font-size: 28px;
 
     @media (max-width: $screen-breakpoint-md) {
       font-size: 24px;

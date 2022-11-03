@@ -5,11 +5,11 @@ import { observer } from 'mobx-react-lite'
 import MovieStore from 'stores/MovieStore'
 import { DataList } from 'components/ui/DataList'
 import { MovieCreditsHandler } from 'modules/movie/MovieCreditsHandler'
-import styles from './MovieCredits.module.scss'
+import styles from './MovieTopCredits.module.scss'
 
-export const MovieCredits = observer(() => {
+export const MovieTopCredits = observer(() => {
   const { credits, contentLength } = useMemo(() => {
-    return new MovieCreditsHandler(MovieStore.credits.crew).credits
+    return new MovieCreditsHandler(MovieStore.credits.crew).topCredits
   }, [])
 
   if (contentLength <= 0) return null

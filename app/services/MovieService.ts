@@ -7,6 +7,7 @@ import { IMovieDetails } from 'models/movie/IMovieDetails'
 import { IMovieResponse } from 'models/api/responses/movie/IMovieResponse'
 import { MovieApiEndpoints } from 'models/endpoints/MovieApiEndpoints'
 import { IMovieImagesResponse } from 'models/api/responses/movie/IMovieImagesResponse'
+import { IMovieCredits } from '../models/movie/credits/IMovieCredits'
 
 const api = axios.create({
   baseURL: process.env.TMDB_API_URL + '/movie',
@@ -66,20 +67,20 @@ export class MovieService extends MovieEndpointsHandler {
   //     throw new MovieRequestError(message)
   //   }
   // }
-  //
-  // public static async fetchCredits(movieId: string): Promise<IMovieCreditsResponse> {
-  //   try {
-  //     const url = this.getCreditsEndpoint(movieId)
-  //     const { data } = await api.get<IMovieCreditsResponse>(url)
-  //
-  //     return data
-  //   } catch {
-  //     const message = this.requestErrorHandler(TMDbMovieApiEndpoints.CREDITS)
-  //
-  //     throw new MovieRequestError(message)
-  //   }
-  // }
-  //
+
+  public static async fetchCredits(movieId: string): Promise<IMovieCredits> {
+    try {
+      const url = this.getCreditsEndpoint(movieId)
+      const { data } = await api.get<IMovieCredits>(url)
+
+      return data
+    } catch {
+      const message = this.requestErrorHandler(MovieApiEndpoints.CREDITS)
+
+      throw new MovieRequestError(message)
+    }
+  }
+
   // public static async fetchCollections(movieId: string): Promise<TMovieCollectionsResponse> {
   //   try {
   //     const url = this.getCollectionsEndpoint(movieId)

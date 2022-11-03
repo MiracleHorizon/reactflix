@@ -42,6 +42,14 @@ class MovieStore {
     return this._images
   }
 
+  public get reviews() {
+    return this._reviews
+  }
+
+  public get collections() {
+    return this._collections
+  }
+
   public get totalReviews() {
     return this._reviews.length
   }
@@ -52,6 +60,14 @@ class MovieStore {
 
   public set images(images: IImage[]) {
     this._images = images
+  }
+
+  public set credits(credits: IMovieCredits) {
+    this._credits = credits
+  }
+
+  public set details(details: IMovieDetails) {
+    this._details = details
   }
 
   public initializeData({ keywords, credits, reviews, lists, ...details }: IMovieResponse) {
