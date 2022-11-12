@@ -4,7 +4,6 @@
 .container {
   margin-bottom: 14px;
   padding-bottom: 14px;
-  border-bottom: 1px solid $antd-gray-4;
 }
 
 .title {
@@ -40,4 +39,8 @@
       }
     }
   }
+}
+
+.borderBottom {
+  border-bottom: 1px solid $antd-gray-4;
 }

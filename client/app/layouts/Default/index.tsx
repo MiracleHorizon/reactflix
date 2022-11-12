@@ -3,8 +3,10 @@ import BackTop from 'antd/lib/back-top'
 import { FC } from 'react'
 
 import { HeadComponent } from 'components/HeadComponent'
+import { PageContentLoader } from 'components/ui/loaders/PageContent'
 import { DefaultLayoutHeader } from './Header'
 import { NavigationDrawer } from './NavigationDrawer'
+import { useChangeRoute } from 'hooks/useChangeRoute'
 import Props from '../Layout.types'
 import styles from './DefaultLayout.module.scss'
 
@@ -14,7 +16,7 @@ export const DefaultLayout: FC<Props> = ({ children, ...seoData }) => (
     <BackTop className={styles.backTop} />
     <DefaultLayoutHeader />
     <NavigationDrawer />
-    <Layout.Content className={styles.content}>{children}</Layout.Content>
+    {!useChangeRoute() ? <Layout.Content className={styles.content}>{children}</Layout.Content> : <PageContentLoader />}
     <footer style={{ height: '72px' }}>Footer</footer>
   </Layout>
 )

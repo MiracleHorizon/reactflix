@@ -1,5 +1,6 @@
 import Title from 'antd/lib/typography/Title'
 import Text from 'antd/lib/typography/Text'
+import classNames from 'classnames'
 import { FC, useMemo } from 'react'
 
 import MovieStore from 'stores/MovieStore'
@@ -8,7 +9,7 @@ import { MovieCreditsHandler } from 'modules/movie/MovieCreditsHandler'
 import { MovieCreditDepartment } from 'models/movie/MovieCreditDepartment'
 import styles from './CreditsList.module.scss'
 
-export const MovieCreditsList: FC<Props> = ({ title, creditsDepartment, children }) => {
+export const MovieCreditsList: FC<Props> = ({ title, isLastInLine, creditsDepartment, children }) => {
   const credits = useMemo(() => {
     const creditsHandler = new MovieCreditsHandler(MovieStore.credits.crew)
 
@@ -18,7 +19,7 @@ export const MovieCreditsList: FC<Props> = ({ title, creditsDepartment, children
   if (!children && credits.length === 0) return null
 
   return (
-    <section className={styles.container}>
+    <section className={classNames(styles.container, { [styles.borderBottom]: !isLastInLine })}>
       <Title level={3} ellipsis={{ rows: 2 }} className={styles.title}>
         {title}
       </Title>
@@ -40,6 +41,7 @@ export const MovieCreditsList: FC<Props> = ({ title, creditsDepartment, children
 
 interface Props {
   title: string
+  isLastInLine: boolean
   creditsDepartment?: MovieCreditDepartment
   children?: JSX.Element
 }

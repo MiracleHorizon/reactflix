@@ -1,4 +1,5 @@
 import Head from 'next/head'
+
 import { SeoParams } from 'types'
 import { APP_NAME } from 'utils/constants/app'
 import { APP_DESCRIPTION, APP_KEYWORDS } from 'utils/constants/seo'
