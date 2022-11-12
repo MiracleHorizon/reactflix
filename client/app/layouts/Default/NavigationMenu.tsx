@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 
 import AppStore from 'stores/AppStore'
 import { LinkWrapper } from 'components/LinkWrapper'
-import { HEADER_NAVIGATION_CATEGORIES } from 'utils/constants/app'
+import { HEADER_NAVIGATION_CATEGORIES } from 'utils/constants/navigation'
 
 export const NavigationMenu: FC<{ placement: 'header' | 'drawer' }> = ({ placement }) => {
   const router = useRouter()

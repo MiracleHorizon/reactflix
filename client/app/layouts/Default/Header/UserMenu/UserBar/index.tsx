@@ -6,7 +6,7 @@ import { memo } from 'react'
 
 import UserStore from 'stores/UserStore'
 import { LinkWrapper } from 'components/LinkWrapper'
-import { HEADER_USER_MENU_OPTIONS } from 'utils/constants/app'
+import { HEADER_USER_MENU_OPTIONS } from 'utils/constants/navigation'
 import { IUser } from 'models/IUser'
 import styles from './UserBar.module.scss'
 
