@@ -1,5 +1,6 @@
-import { IMovieCredit } from 'models/movie/credits/IMovieCredit'
+import { getUniqueObjectsFromArray } from 'helpers/getUniqueObjectsFromArray'
 import { MovieCreditDepartment } from 'models/movie/MovieCreditDepartment'
+import { IMovieCredit } from 'models/movie/credits/IMovieCredit'
 
 export class MovieCreditsHandler {
   constructor(private _crew: IMovieCredit[]) {}
@@ -20,8 +21,10 @@ export class MovieCreditsHandler {
     return this.crew.filter(({ known_for_department }) => known_for_department === MovieCreditDepartment.ACTING)
   } // TODO Переработать концепция получения главных звёзд.
 
-  public getCreditsByDepartment(department: MovieCreditDepartment) {
-    return this.crew.filter(credit => credit.department === department)
+  public getCreditsByDepartment(department: MovieCreditDepartment): IMovieCredit[] {
+    const credits = this.crew.filter(credit => credit.department === department)
+
+    return getUniqueObjectsFromArray('id', credits)
   }
 
   public getCreditDisplayObject({ id, name }: IMovieCredit) {

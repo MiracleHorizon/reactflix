@@ -11,7 +11,7 @@ export const ImageComponent: FC<Props> = ({ imagePath, preview = false, alt }) =
     preview={preview}
     alt={alt || 'Image'}
   />
-)
+) // Todo разобраться с fallback
 
 interface Props {
   imagePath: string | null

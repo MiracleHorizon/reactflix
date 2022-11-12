@@ -12,7 +12,7 @@ export const DefaultLayoutHeader = () => (
     <AppLogo />
     <div className={styles.content}>
       <HeaderNavigationMenu />
-      <HeaderUserMenu />
+      {/*<HeaderUserMenu />*/}
     </div>
   </Header>
 )

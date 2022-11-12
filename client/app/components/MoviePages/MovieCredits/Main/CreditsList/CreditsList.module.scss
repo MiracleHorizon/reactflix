@@ -1,0 +1,43 @@
+@import 'styles/variables/colors';
+@import 'styles/variables/breakpoints';
+
+.container {
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid $antd-gray-4;
+}
+
+.title {
+  margin-bottom: 6px;
+
+  @media (max-width: $screen-breakpoint-md) {
+    font-size: 22px !important;
+  }
+}
+
+.list {
+  margin-bottom: 0;
+  padding-left: 30px;
+
+  li {
+    a {
+      margin-right: 8px;
+      font-size: 18px;
+    }
+
+    span {
+      font-size: 16px;
+      color: $antd-gray-8;
+    }
+
+    @media (max-width: $screen-breakpoint-md) {
+      a {
+        font-size: 16px;
+      }
+
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+}

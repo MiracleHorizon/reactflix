@@ -1,7 +1,7 @@
 import { GetServerSidePropsContext, NextPage } from 'next'
 
 import MovieStore from 'stores/MovieStore'
-import { Movie } from 'components/Movie'
+import { Movie } from 'components/MoviePages/Movie'
 import { MovieService } from 'services/MovieService'
 import { getServerSidePropsParamsId } from 'helpers/getServerSidePropsParamsId'
 import { IMovieResponse } from 'models/api/responses/movie/IMovieResponse'

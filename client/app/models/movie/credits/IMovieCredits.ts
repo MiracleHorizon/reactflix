@@ -5,3 +5,5 @@ export interface IMovieCredits {
   cast: IMovieCastCredit[]
   crew: IMovieCredit[]
 }
+
+//Todo Проверить поля в IMovieCredit и концепцию наследования от него IMovieCastCredit

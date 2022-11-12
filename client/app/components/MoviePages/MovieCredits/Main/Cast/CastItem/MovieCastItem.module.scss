@@ -1,0 +1,32 @@
+@import 'styles/variables/colors';
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .imageContainer {
+    width: 65px;
+    margin-right: 12px;
+  }
+
+  .desc {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    height: 80px;
+    padding: 6px 0;
+
+    a {
+      span {
+        font-size: 20px;
+      }
+    }
+
+    .character {
+      font-size: 17px;
+      color: $antd-gray-8;
+    }
+  }
+}

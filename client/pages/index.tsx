@@ -5,8 +5,7 @@ const HomePage = () => {
   return (
     <DefaultLayout>
       <div>
-        <Link href='/movie/680'>
-`        </Link>
+        <Link href='/movie/680'>Test</Link>
       </div>
     </DefaultLayout>
   )

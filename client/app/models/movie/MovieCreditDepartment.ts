@@ -9,4 +9,6 @@ export enum MovieCreditDepartment {
   CREW = 'Crew',
   COSTUME = 'Costume & Make-Up',
   CAMERA = 'Camera',
+  LIGHTING = 'Lighting',
+  EDITING = 'Editing',
 }

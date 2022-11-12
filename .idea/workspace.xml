@@ -1,17 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1eac7a59-921f-468a-832f-5951cb7756a8" name="Changes" comment="Исправлена некорретная длина меню навигации в header стандартного layout для &#10;&#10;Исправлена вёрстка компонента RatingButton: добавлена корректные внутренние отступы.&#10;&#10;В базовой форме реализован контент страницы credits для отдельного фильма.&#10;&#10;В проект добавлена папка server с базовой конфигураций backend части приложения на основе NestJS&#10;&#10;Проведен рефакторинг класса - обработчика команды фильма. &#10;&#10;Добавлен новый класс - обработчик: MovieCreditsCategoriesHandler. В него вынесена логика обработки категорий команды фильма для основной страницы отдельного фильма.">
-      <change afterPath="$PROJECT_DIR$/client/app/assets/register_cover.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/app/components/Register/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/app/layouts/Auth/AuthLayout.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/app/layouts/Auth/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/app/models/api/auth/ISignUpParams.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/app/services/AuthService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/pages/register.tsx" afterDir="false" />
+    <list default="true" id="1eac7a59-921f-468a-832f-5951cb7756a8" name="Changes" comment="feat: Добавлен новый layout: AuthLayout.&#10;feat: Добавлена страница регистрации.&#10;feat: Добавлен сервис для аутентификации. Реализован метод регистрации пользователя.&#10;feat: Добавлена модель данных для регистрации пользователя.">
+      <change afterPath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Main/CreditsList/CreditsList.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/app/helpers/getUniqueObjectsFromArray.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/auth/auth.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/stores/UserStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/stores/UserStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Estimates/MovieEstimates.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Estimates/MovieEstimates.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Estimates/UserRatingButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Estimates/UserRatingButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Estimates/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Estimates/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Header/MovieHeader.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Header/MovieHeader.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Header/Title/MovieTitle.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Header/Title/MovieTitle.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Header/Title/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Header/Title/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Main/Description/CommunityBar/MovieCommunityBar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Main/Description/CommunityBar/MovieCommunityBar.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Main/Description/CommunityBar/MovieCommunityLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Main/Description/CommunityBar/MovieCommunityLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Main/Description/CommunityBar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Main/Description/CommunityBar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Main/Description/MovieDescription.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Main/Description/MovieDescription.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Main/Description/Tagline/MovieTagline.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Main/Description/Tagline/MovieTagline.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Main/Description/Tagline/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Main/Description/Tagline/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Main/Description/TopCredits/MovieTopCredits.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Main/Description/TopCredits/MovieTopCredits.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Main/Description/TopCredits/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Main/Description/TopCredits/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Main/Description/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Main/Description/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Main/MovieDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Main/MovieDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Main/MovieMain.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Main/MovieMain.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Main/Overview/MovieOverview.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Main/Overview/MovieOverview.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Main/Overview/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Main/Overview/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Main/TopCast/Item/MovieTopCastItem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Main/TopCast/Item/MovieTopCastItem.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Main/TopCast/Item/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Main/TopCast/Item/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Main/TopCast/MovieTopCast.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Main/TopCast/MovieTopCast.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Main/TopCast/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Main/TopCast/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Main/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Main/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/Movie.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/Movie.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Movie/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Movie/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/MovieCredits/Header/MovieCreditsHeader.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Header/MovieCreditsHeader.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/MovieCredits/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/MovieCredits/Main/Cast/CastItem/MovieCastItem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Main/Cast/CastItem/MovieCastItem.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/MovieCredits/Main/Cast/CastItem/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Main/Cast/CastItem/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/MovieCredits/Main/Cast/CastList/MovieCastList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Main/Cast/CastList/MovieCastList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/MovieCredits/Main/Cast/CastList/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Main/Cast/CastList/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/MovieCredits/Main/CreditsList/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Main/CreditsList/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/MovieCredits/Main/MovieCreditsMain.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Main/MovieCreditsMain.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/MovieCredits/Main/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Main/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/MovieCredits/MovieCredits.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/MovieCredits.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/MovieCredits/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/ui/ImageComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/ui/ImageComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/layouts/Default/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/layouts/Default/Header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/models/movie/MovieCreditDepartment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/models/movie/MovieCreditDepartment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/models/movie/credits/IMovieCredits.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/models/movie/credits/IMovieCredits.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/modules/movie/MovieCreditsHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/modules/movie/MovieCreditsHandler.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/movie/[id]/credits.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/movie/[id]/credits.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/movie/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/movie/[id]/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/app.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/app.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/server/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +101,17 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
     "prettierjs.PrettierConfiguration.Package": "/usr/local/lib/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
     "ts.external.directory.path": "/Users/denisalekseenko/WebstormProjects/reactflix/server/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/app/components/MoviePages" />
+      <recent name="$PROJECT_DIR$/server/src/auth" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -81,7 +133,9 @@
       <workItem from="1667860350249" duration="2884000" />
       <workItem from="1668058409679" duration="1229000" />
       <workItem from="1668059651606" duration="2195000" />
-      <workItem from="1668062865833" duration="10097000" />
+      <workItem from="1668062865833" duration="11681000" />
+      <workItem from="1668170216970" duration="8000" />
+      <workItem from="1668234952925" duration="6442000" />
     </task>
     <task id="LOCAL-00001" summary="Исправлена некорретная длина меню навигации в header стандартного layout для &#10;&#10;Исправлена вёрстка компонента RatingButton: добавлена корректные внутренние отступы.&#10;&#10;В базовой форме реализован контент страницы credits для отдельного фильма.&#10;&#10;Проведен рефакторинг класса - обработчика команды фильма. &#10;&#10;Добавлен новый класс - обработчик: MovieCreditsCategoriesHandler. В него вынесена логика обработки категорий команды фильма для основной страницы отдельного фильма.">
       <created>1668060407324</created>
@@ -139,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668066140160</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: Добавлен новый layout: AuthLayout.&#10;feat: Добавлена страница регистрации.&#10;feat: Добавлен сервис для аутентификации. Реализован метод регистрации пользователя.&#10;feat: Добавлена модель данных для регистрации пользователя.">
+      <created>1668074117687</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1668074117687</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +226,7 @@
     <MESSAGE value="Исправлена некорретная длина меню навигации в header стандартного layout для &#10;&#10;Исправлена вёрстка компонента RatingButton: добавлена корректные внутренние отступы.&#10;&#10;В базовой форме реализован контент страницы credits для отдельного фильма.&#10;&#10;Проведен рефакторинг класса - обработчика команды фильма. &#10;&#10;Добавлен новый класс - обработчик: MovieCreditsCategoriesHandler. В него вынесена логика обработки категорий команды фильма для основной страницы отдельного фильма." />
     <MESSAGE value="В проект добавлена папка server с базовой конфигураций backend части приложения на основе NestJS" />
     <MESSAGE value="Исправлена некорретная длина меню навигации в header стандартного layout для &#10;&#10;Исправлена вёрстка компонента RatingButton: добавлена корректные внутренние отступы.&#10;&#10;В базовой форме реализован контент страницы credits для отдельного фильма.&#10;&#10;В проект добавлена папка server с базовой конфигураций backend части приложения на основе NestJS&#10;&#10;Проведен рефакторинг класса - обработчика команды фильма. &#10;&#10;Добавлен новый класс - обработчик: MovieCreditsCategoriesHandler. В него вынесена логика обработки категорий команды фильма для основной страницы отдельного фильма." />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлена некорретная длина меню навигации в header стандартного layout для &#10;&#10;Исправлена вёрстка компонента RatingButton: добавлена корректные внутренние отступы.&#10;&#10;В базовой форме реализован контент страницы credits для отдельного фильма.&#10;&#10;В проект добавлена папка server с базовой конфигураций backend части приложения на основе NestJS&#10;&#10;Проведен рефакторинг класса - обработчика команды фильма. &#10;&#10;Добавлен новый класс - обработчик: MovieCreditsCategoriesHandler. В него вынесена логика обработки категорий команды фильма для основной страницы отдельного фильма." />
+    <MESSAGE value="feat: Добавлен новый layout: AuthLayout.&#10;feat: Добавлена страница регистрации.&#10;feat: Добавлен сервис для аутентификации. Реализован метод регистрации пользователя.&#10;feat: Добавлена модель данных для регистрации пользователя." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Добавлен новый layout: AuthLayout.&#10;feat: Добавлена страница регистрации.&#10;feat: Добавлен сервис для аутентификации. Реализован метод регистрации пользователя.&#10;feat: Добавлена модель данных для регистрации пользователя." />
   </component>
 </project>
