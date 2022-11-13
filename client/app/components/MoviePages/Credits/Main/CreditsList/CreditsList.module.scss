@@ -25,17 +25,13 @@
     }
 
     span {
-      font-size: 16px;
-      color: $antd-gray-8;
+      font-size: 15px;
+      color: $antd-gray-7;
     }
 
     @media (max-width: $screen-breakpoint-md) {
       a {
         font-size: 16px;
-      }
-
-      span {
-        font-size: 14px;
       }
     }
   }

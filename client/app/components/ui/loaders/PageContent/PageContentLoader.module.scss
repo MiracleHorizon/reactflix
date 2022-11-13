@@ -1,5 +1,19 @@
+@import 'styles/variables/index';
+@import 'styles/variables/colors';
+
 .loader {
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-top: 200px;
+  height: calc(100vh - $default-layout-footer-height - $default-layout-footer-height);
+
+  :global {
+    .ant-spin {
+      color: $antd-orange-6;
+    }
+
+    .ant-spin-dot {
+      font-size: 60px;
+    }
+  }
 }

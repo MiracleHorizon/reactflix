@@ -1,0 +1,26 @@
+@import 'styles/variables/colors';
+@import 'styles/variables/breakpoints';
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: available;
+  margin-top: auto;
+
+  a {
+    display: inline-block;
+    margin-right: 16px;
+    margin-top: 4px;
+    font-size: 16px;
+    color: $antd-gray-8;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: $screen-breakpoint-md) {
+      font-size: 14px;
+    }
+  }
+}

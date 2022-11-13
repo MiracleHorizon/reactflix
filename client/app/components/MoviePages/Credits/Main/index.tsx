@@ -6,7 +6,7 @@ import styles from './MovieCreditsMain.module.scss'
 const credits = [
   { title: 'Directed by', creditsDepartment: MovieCreditDepartment.DIRECTING },
   { title: 'Writing credits', creditsDepartment: MovieCreditDepartment.WRITING },
-  { title: 'Cast', children: <MovieCastList /> },
+  { title: 'Cast', creditsDepartment: MovieCreditDepartment.ACTING, children: <MovieCastList /> },
   { title: 'Produced by', creditsDepartment: MovieCreditDepartment.PRODUCTION },
   { title: 'Editing by', creditsDepartment: MovieCreditDepartment.EDITING },
   { title: 'Costume and Make-Up by', creditsDepartment: MovieCreditDepartment.COSTUME },

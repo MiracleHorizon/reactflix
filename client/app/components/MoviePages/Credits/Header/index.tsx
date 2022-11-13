@@ -4,7 +4,8 @@ import Paragraph from 'antd/lib/typography/Paragraph'
 import MovieStore from 'stores/MovieStore'
 import { LinkWrapper } from 'components/LinkWrapper'
 import { ImageComponent } from 'components/ui/ImageComponent'
-import { MoviePagesNavigationMenu } from 'components/MoviePages/MoviePagesNavigationMenu'
+import { MoviePagesNavigationMenu } from 'components/MoviePages/NavigationMenu'
+import { MovieCreditsAnchorsMenu } from './AnchorsMenu'
 import { getFullYearFromDateString } from 'helpers/getFullYearFromDateString'
 import styles from './MovieCreditsHeader.module.scss'
 
@@ -26,6 +27,7 @@ export const MovieCreditsHeader = () => {
             <Paragraph>({getFullYearFromDateString(release_date)})</Paragraph>
           </div>
           <Title level={1}>Full Cast & Crew</Title>
+          <MovieCreditsAnchorsMenu />
         </div>
       </div>
       <MoviePagesNavigationMenu />

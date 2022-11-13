@@ -1,33 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1eac7a59-921f-468a-832f-5951cb7756a8" name="Changes" comment="Патч от 12.11.2022. Обработка состояния загрузки страницы.&#10;&#10;feat: Добавлен новый хук: useChangeRoute. Он отслеживает состояние загрузки страницы.&#10;&#10;feat: В ui добавлена папка loaders. Добавлен компонент PageContentLoader.&#10;&#10;feat: В разметку DefaultLayout добавлена условная отрисовка компонента children при условии того, что загрузка страницы завершена. В ином случае отображается PageContentLoader.&#10;&#10;Общее: &#10;&#10;feat: В компонент CreditsList добавлено условие для отображения нижней границы элемента - только в том случае, если секция не является последней в списке.">
-      <change afterPath="$PROJECT_DIR$/client/app/components/MoviePages/MoviePagesNavigationMenu/MoviePagesNavigationMenu.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/app/components/MoviePages/MoviePagesNavigationMenu/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/app/helpers/getPathForRouteWithQueryId.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/app/utils/constants/navigation.ts" afterDir="false" />
+    <list default="true" id="1eac7a59-921f-468a-832f-5951cb7756a8" name="Changes" comment="Патч от 12.11.2022. &#10;&#10;Страница фильма.&#10;&#10;feat: Добавлен универсальный для страницы фильма компонент MoviePagesNavigationMenu. С его помощью может осуществляться навигация по страницам фильма. На текущий момент компонент размещен на странице команды фильма.&#10;&#10;feat: Добавлен массив для категорий навигации по страницам фильма.&#10;&#10;Общее: &#10;&#10;feat: Добавлена функция - хелпер: getPathForRouteWithQueryId, с помощью которой можно получить точный путь текущей страницы, исключив базовый путь и айди страницы. &#10;&#10;feat: Добавлены новые цвета в переменные стилей.&#10;&#10;refactor: Массивы с категориями навигации были перенесены в отдельный файл с константами - utils/constants/navigation. &#10;&#10;refactor, fix: Проведён рефаторинг и исправление некоторых стилей в приложении.">
+      <change afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Header/AnchorsMenu/MovieCreditsAnchorsMenu.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Header/AnchorsMenu/index.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/server/src/auth/auth.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/HeadComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/HeadComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Header/MovieCreditsHeader.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Header/MovieCreditsHeader.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Main/Cast/CastItem/MovieCastItem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Main/Cast/CastItem/MovieCastItem.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Main/Cast/CastItem/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Main/Cast/CastItem/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Main/Cast/CastList/MovieCastList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Main/Cast/CastList/MovieCastList.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Main/Cast/CastList/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Main/Cast/CastList/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Main/CreditsList/CreditsList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Main/CreditsList/CreditsList.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Main/CreditsList/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Main/CreditsList/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Main/MovieCreditsMain.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Main/MovieCreditsMain.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/Main/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Main/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/MovieCredits.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/MovieCredits.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/MoviePages/MovieCredits/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/layouts/Default/Header/UserMenu/UserBar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/layouts/Default/Header/UserMenu/UserBar/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/layouts/Default/NavigationMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/layouts/Default/NavigationMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/utils/constants/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/utils/constants/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/utils/decorators/RequestError.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Header/MovieCreditsHeader.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Header/MovieCreditsHeader.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Main/CreditsList/CreditsList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Main/CreditsList/CreditsList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Main/CreditsList/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Main/CreditsList/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Main/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/Credits/Main/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/MoviePages/MoviePagesNavigationMenu/MoviePagesNavigationMenu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/NavigationMenu/MoviePagesNavigationMenu.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/MoviePages/MoviePagesNavigationMenu/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/MoviePages/NavigationMenu/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/ui/loaders/PageContent/PageContentLoader.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/ui/loaders/PageContent/PageContentLoader.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/ui/loaders/PageContent/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/ui/loaders/PageContent/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/movie/[id]/credits.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/movie/[id]/credits.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/variables/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/variables/_colors.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/app.controller.ts" beforeDir="false" />
@@ -65,23 +53,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "prettierjs.PrettierConfiguration.Package": "/usr/local/lib/node_modules/prettier",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
-    "ts.external.directory.path": "/Users/denisalekseenko/WebstormProjects/reactflix/server/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/usr/local/lib/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Color Scheme Font&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/denisalekseenko/WebstormProjects/reactflix/server/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/app/components/MoviePages" />
@@ -111,7 +99,8 @@
       <workItem from="1668059651606" duration="2195000" />
       <workItem from="1668062865833" duration="11681000" />
       <workItem from="1668170216970" duration="8000" />
-      <workItem from="1668234952925" duration="18073000" />
+      <workItem from="1668234952925" duration="18779000" />
+      <workItem from="1668328499522" duration="8344000" />
     </task>
     <task id="LOCAL-00001" summary="Исправлена некорретная длина меню навигации в header стандартного layout для &#10;&#10;Исправлена вёрстка компонента RatingButton: добавлена корректные внутренние отступы.&#10;&#10;В базовой форме реализован контент страницы credits для отдельного фильма.&#10;&#10;Проведен рефакторинг класса - обработчика команды фильма. &#10;&#10;Добавлен новый класс - обработчик: MovieCreditsCategoriesHandler. В него вынесена логика обработки категорий команды фильма для основной страницы отдельного фильма.">
       <created>1668060407324</created>
@@ -190,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668250475348</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Патч от 12.11.2022. &#10;&#10;Страница фильма.&#10;&#10;feat: Добавлен универсальный для страницы фильма компонент MoviePagesNavigationMenu. С его помощью может осуществляться навигация по страницам фильма. На текущий момент компонент размещен на странице команды фильма.&#10;&#10;feat: Добавлен массив для категорий навигации по страницам фильма.&#10;&#10;Общее: &#10;&#10;feat: Добавлена функция - хелпер: getPathForRouteWithQueryId, с помощью которой можно получить точный путь текущей страницы, исключив базовый путь и айди страницы. &#10;&#10;feat: Добавлены новые цвета в переменные стилей.&#10;&#10;refactor: Массивы с категориями навигации были перенесены в отдельный файл с константами - utils/constants/navigation. &#10;&#10;refactor, fix: Проведён рефаторинг и исправление некоторых стилей в приложении.">
+      <created>1668258953509</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1668258953509</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +215,7 @@
     <MESSAGE value="feat: Добавлен новый layout: AuthLayout.&#10;feat: Добавлена страница регистрации.&#10;feat: Добавлен сервис для аутентификации. Реализован метод регистрации пользователя.&#10;feat: Добавлена модель данных для регистрации пользователя." />
     <MESSAGE value="Патч от 12.11.2022. Страница команды фильма. &#10;Результат: страница практически полностью завершена. Остальные нововведения будут касаться дизайна и адаптивности.&#10;&#10;feat: Добавлена функция - хелпер getUniqueObjectsFromArray, с помощью которой по указанному ключу из передаваемого массива возвращается массив уникальных объектов.&#10;&#10;feat: Добавлена роль человека в списке команд фильма.&#10;&#10;feat: Добавлены новые департаменты для модели MovieCreditDepartment: Editing, Lightning. Новые и несколько уже имеющихся, но неиспользуемых полей были добавлены в массив для отображения команд фильма.&#10;&#10;Общее: &#10;feat: Создана папка MoviePages, в которую были перемещены папки Movie (страница фильма) и MovieCredits (страница команды фильма) для более удобной навигации по проекту в будущем и лучшей структуризации." />
     <MESSAGE value="Патч от 12.11.2022. Обработка состояния загрузки страницы.&#10;&#10;feat: Добавлен новый хук: useChangeRoute. Он отслеживает состояние загрузки страницы.&#10;&#10;feat: В ui добавлена папка loaders. Добавлен компонент PageContentLoader.&#10;&#10;feat: В разметку DefaultLayout добавлена условная отрисовка компонента children при условии того, что загрузка страницы завершена. В ином случае отображается PageContentLoader.&#10;&#10;Общее: &#10;&#10;feat: В компонент CreditsList добавлено условие для отображения нижней границы элемента - только в том случае, если секция не является последней в списке." />
-    <option name="LAST_COMMIT_MESSAGE" value="Патч от 12.11.2022. Обработка состояния загрузки страницы.&#10;&#10;feat: Добавлен новый хук: useChangeRoute. Он отслеживает состояние загрузки страницы.&#10;&#10;feat: В ui добавлена папка loaders. Добавлен компонент PageContentLoader.&#10;&#10;feat: В разметку DefaultLayout добавлена условная отрисовка компонента children при условии того, что загрузка страницы завершена. В ином случае отображается PageContentLoader.&#10;&#10;Общее: &#10;&#10;feat: В компонент CreditsList добавлено условие для отображения нижней границы элемента - только в том случае, если секция не является последней в списке." />
+    <MESSAGE value="Патч от 12.11.2022. &#10;&#10;Страница фильма.&#10;&#10;feat: Добавлен универсальный для страницы фильма компонент MoviePagesNavigationMenu. С его помощью может осуществляться навигация по страницам фильма. На текущий момент компонент размещен на странице команды фильма.&#10;&#10;feat: Добавлен массив для категорий навигации по страницам фильма.&#10;&#10;Общее: &#10;&#10;feat: Добавлена функция - хелпер: getPathForRouteWithQueryId, с помощью которой можно получить точный путь текущей страницы, исключив базовый путь и айди страницы. &#10;&#10;feat: Добавлены новые цвета в переменные стилей.&#10;&#10;refactor: Массивы с категориями навигации были перенесены в отдельный файл с константами - utils/constants/navigation. &#10;&#10;refactor, fix: Проведён рефаторинг и исправление некоторых стилей в приложении." />
+    <option name="LAST_COMMIT_MESSAGE" value="Патч от 12.11.2022. &#10;&#10;Страница фильма.&#10;&#10;feat: Добавлен универсальный для страницы фильма компонент MoviePagesNavigationMenu. С его помощью может осуществляться навигация по страницам фильма. На текущий момент компонент размещен на странице команды фильма.&#10;&#10;feat: Добавлен массив для категорий навигации по страницам фильма.&#10;&#10;Общее: &#10;&#10;feat: Добавлена функция - хелпер: getPathForRouteWithQueryId, с помощью которой можно получить точный путь текущей страницы, исключив базовый путь и айди страницы. &#10;&#10;feat: Добавлены новые цвета в переменные стилей.&#10;&#10;refactor: Массивы с категориями навигации были перенесены в отдельный файл с константами - utils/constants/navigation. &#10;&#10;refactor, fix: Проведён рефаторинг и исправление некоторых стилей в приложении." />
   </component>
 </project>
