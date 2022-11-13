@@ -20,8 +20,8 @@ const credits = [
 
 export const MovieCreditsMain = () => (
   <main className={styles.container}>
-    {credits.map((category, index) => (
-      <MovieCreditsList key={category.title} isLastInLine={index === credits.length - 1} {...category} />
+    {credits.map((category) => (
+      <MovieCreditsList key={category.title} {...category} />
     ))}
   </main>
 )

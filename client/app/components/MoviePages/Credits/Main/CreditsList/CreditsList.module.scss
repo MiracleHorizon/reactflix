@@ -3,11 +3,40 @@
 
 .container {
   margin-bottom: 14px;
-  padding-bottom: 14px;
+}
+
+.collapse {
+  background: transparent;
+
+  :global {
+    .ant-collapse-header {
+      align-items: center !important;
+      justify-content: center;
+    }
+
+    .ant-collapse-content {
+      background: $antd-gray-3;
+    }
+
+    .ant-collapse-content-box {
+      padding: 0 16px !important;
+    }
+
+    .ant-collapse-expand-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span[role='img'] {
+        font-size: 18px !important;
+        color: $antd-gray-7;
+      }
+    }
+  }
 }
 
 .title {
-  margin-bottom: 6px;
+  margin-bottom: 0 !important;
 
   @media (max-width: $screen-breakpoint-md) {
     font-size: 22px !important;
@@ -17,6 +46,7 @@
 .list {
   margin-bottom: 0;
   padding-left: 30px;
+  list-style: none;
 
   li {
     a {
@@ -37,6 +67,6 @@
   }
 }
 
-.borderBottom {
-  border-bottom: 1px solid $antd-gray-4;
+.divider {
+  margin: 18px 0;
 }
